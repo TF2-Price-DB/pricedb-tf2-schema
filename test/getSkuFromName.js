@@ -9,7 +9,7 @@ const rl = readline.createInterface({
 
 SchemaManager.prototype.getSchema = function (callback) {
     axios
-        .get('https://schema.autobot.tf/schema')
+        .get('https://sku.pricedb.io/api/schema')
         .then(response => {
             this.setSchema(response.data, true);
             callback(null, this.schema);
